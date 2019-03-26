@@ -1,0 +1,157 @@
+header#header {
+  padding-bottom: 30px;
+  background-color: #ffffff;
+}
+
+header .control-bar {
+
+  margin-bottom: 30px;
+  border-bottom: $border $border-color;
+  @include box-shadow(0 2px 7px #acacac);
+  overflow: hidden;
+
+  ul {
+    display: inline-block;
+    li {
+      float: left;
+      padding: 3px 0;
+      font-size: $link-fsize;
+      font-weight: $link-fweight;
+    }
+  }
+  .left-menu li {
+    padding-right: 15px;
+
+    a {
+      color: #006aac;
+    }
+  }
+  .right-menu li {
+    padding-left: 15px;
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    span#cart {
+      background: url("../img/cart.png") no-repeat center;
+      background-size: 19px 19px;
+      width: 24px;
+      height: 25px;
+      overflow: hidden;
+      display: block;
+    }
+    span#badge {
+      position: absolute;
+      font-size: 0.9em;
+      line-height: 16px;
+      top: 7px;
+      left: -4px;
+      display: inline-block;
+      background-color: #ff601c;
+      padding: 0 5px;
+      color: #ffffff;
+      border-radius: 2px;
+    }
+  }
+}
+
+header .search {
+
+  $height: 40px;
+
+  .search-inner {
+    width: 100%;
+    height: $height;
+  }
+
+  ul {
+    display: inline-block;
+    width: 100%;
+
+    li {
+      float: left;
+      display: inline-block;
+      height: $height;
+      line-height: $height;
+    }
+
+    li.brand {
+      width: 20%;
+
+      img {
+        position: relative;
+        top: -5px;
+        width: 85%;
+        max-height: 60px;
+        min-width: 150px;
+      }
+    }
+
+    li.search-box {
+      width: 53%;
+
+      input {
+        width: 100%;
+        height: $height;
+        border: 1px solid #ddd;
+        border-right: none;
+        @include border-radius(3px 0 0 3px);
+        outline: none;
+        padding: 0 15px;
+
+        &:focus {
+          border-color: #adadad;
+        }
+      }
+    }
+
+    li.option-box {
+      //background-color: #87ff77;
+      width: 20%;
+
+      div {
+        height: 40px;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-left-color: #efefef;
+        @include border-radius(0 3px 3px 0);
+      }
+
+      select {
+        @include appearance(none);
+        background: url("../img/drop-light.png") no-repeat right;
+        background-size: 10px 5px;
+
+        width: 95%;
+        line-height: 22px;
+        height: 20px;
+        font-size: 0.85em;
+        border: none;
+        //border-left-color: #efefef;
+        outline: none;
+        //@include border-radius(0 3px 3px 0);
+        padding: 0 10px;
+
+        &:hover {
+          background: url("../img/drop-dark.png") no-repeat right;
+          background-size: 10px 5px;
+          cursor: pointer;
+        }
+      }
+
+    }
+    li.submit-box {
+      //background-color: antiquewhite;
+      width: 7%;
+
+      input {
+        //width: 80%;
+        //line-height: $height;
+        //padding: 0 5%;
+        margin-left: 10%;
+      }
+    }
+  }
+}

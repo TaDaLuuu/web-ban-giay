@@ -1,0 +1,694 @@
+
+
+// ------------------------------------
+// ------------------------------------
+//          Category Navigation
+// ------------------------------------
+// ------------------------------------
+
+.main-navigation {
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  border-bottom: $border $border-color;
+  border-top: $border $border-color;
+}
+
+.categories {
+
+  //border-top: 1px solid #ddd;
+  //border-bottom: 1px solid #ddd;
+  text-align: center;
+
+  .category-list {
+    display: inline-block;
+
+    li {
+      display: inline-block;
+      padding: 5px 35px;
+    }
+  }
+}
+
+
+// ------------------------------------
+// ------------------------------------
+//          Featured Section
+// ------------------------------------
+// ------------------------------------
+
+
+.featured {
+  width: 60%;
+  margin-bottom: $section-space;
+  height: $slider-height;
+  float: left;
+  overflow: hidden;
+
+  .slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &:hover a.slide-change {
+      display: block;
+    }
+
+    a.slide-change {
+
+      $height: 50px;
+
+      display: none;
+      position: absolute;
+      z-index: 50;
+
+      background-color: rgba(0, 0, 0, 0.25);
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      span {
+        width: 30px;
+        height: $height;
+        line-height: $height;
+        overflow: hidden;
+        display: block;
+      }
+
+      &.prev {
+        top: ($slider-height / 2) - ($height / 2);
+
+        span {
+          background: url("../img/left-arrow.png") no-repeat center;
+          background-size: 35px 35px;
+        }
+      }
+
+      &.next {
+        @extend .prev;
+        right: 0;
+
+        span {
+          background: url("../img/right-arrow.png") no-repeat center;
+          background-size: 35px 35px;
+        }
+      }
+    }
+
+    .slider-nav {
+      display: inline-block;
+      z-index: 50;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+
+      li {
+        cursor: pointer;
+        float: left;
+        width: 12px;
+        height: 12px;
+        margin-left: 10px;
+        background: #ffffff;
+        border-radius: 10px;
+
+        &.current {
+          background-color: #0a8fff;
+        }
+      }
+    }
+
+  }
+
+  .slides {
+    width: 100%;
+    height: $slider-height;
+    position: relative;
+
+    .slide {
+      width: 100%;
+      height: $slider-height;
+      position: absolute;
+    }
+  }
+}
+
+.featured-items {
+  float: left;
+  width: 40%;
+
+  .items {
+    width: 100%;
+    height: $slider-height;
+
+    .item {
+      width: 50%;
+      height: $slider-height / 2;
+      float: left;
+      position: relative;
+      overflow: hidden;
+
+      &:hover a {
+        img {
+          @include transform(scale(1.2, 1.2));
+        }
+        .img-label {
+          display: block;
+        }
+      }
+
+      &:nth-child(1) {
+        padding-left: 4px;
+        padding-right: 2px;
+        padding-bottom: 2px;
+      }
+
+      &:nth-child(2) {
+        padding-left: 2px;
+        padding-bottom: 2px;
+      }
+
+      &:nth-child(3) {
+        width: 100%;
+        padding-top: 2px;
+        padding-left: 4px;
+      }
+
+      a {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        height: ($slider-height / 2) - 2;
+        color: #ffffff;
+
+        &:hover {
+          color: #ffffff;
+        }
+
+        .img-label {
+          position: absolute;
+          bottom: 0;
+
+          display: none;
+
+          width: 100%;
+          height: $slider-height / 2.5;
+
+          @include background(linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)));
+        }
+
+        .img-label p {
+          width: 100%;
+          text-justify: distribute;
+          position: absolute;
+          bottom: 0;
+          padding: 25px 0;
+          text-align: center;
+          color: rgba(255, 255, 255, 0.5);
+
+          &:hover {
+            color: rgba(255, 255, 255, 1);
+
+            i {
+              background-color: rgba(#d31100, 1);
+            }
+          }
+
+          i {
+            background-color: rgba(#d31100, 0.4);
+            //color: #ffffff;
+            padding: 3px 10px;
+            border-radius: 2px;
+          }
+        }
+      }
+
+      img {
+        width: 240px;
+        height: $slider-height / 2;
+        transition: 0.15s all ease-in-out;
+      }
+
+      img.big {
+        width: 480px;
+      }
+
+    }
+  }
+}
+
+
+// ------------------------------------
+// ------------------------------------
+//    Common Styles Product Section
+// ------------------------------------
+// ------------------------------------
+
+.product-section {
+  header h1 {
+    font-size: 1.4em;
+    border: 2px solid transparent;
+    border-bottom-color: #006aac;
+  }
+
+  .today-items {
+    border-top: 2px solid #006aac;
+  }
+}
+
+// ------------------------------------
+// ------------------------------------
+//         Today's Deal Section
+// ------------------------------------
+// ------------------------------------
+
+
+.today-deals {
+
+
+  margin-bottom: $section-space;
+
+  header {
+
+    width: 100%;
+
+    h1 {
+      float: left;
+      width: 30%;
+      height: $today-tab;
+      line-height: $today-tab;
+      border-bottom-color: transparent;
+    }
+
+    .tabs {
+      @extend h1;
+      width: 70%;
+      font-size: 1.4em - 0.3;
+
+      ul {
+        float: right;
+      }
+
+      li {
+        float: left;
+        position: relative;
+        bottom: -3px;
+        height: $today-tab;
+        width: 150px;
+        text-align: center;
+        //padding: 0px 30px;
+        border: 1px solid rgba(180, 180, 180, 0.3);
+        border-bottom-color: transparent;
+        border-radius: 5px 5px 0 0;
+
+        &:first-child {
+          border-right-color: transparent;
+        }
+
+        a {
+          width: 100%;
+          display: block;
+        }
+
+        &.active {
+          z-index: 3;
+          background: #ffffff;
+          a {
+            color: #006aac;
+          }
+          @include box-shadow(-2px -4px 6px 0px rgba(51,51,51,.3));
+        }
+      }
+    }
+
+  }
+
+  .today-items {
+    position: relative;
+    height: $today-deals-ht;
+    width: 100%;
+    background-color: white;
+    //overflow: hidden;
+
+    .category-items {
+      @extend .today-items;
+      display: none;
+    }
+
+    .category-items .left-items {
+      float: left;
+      width: 50%;
+
+      li {
+        height: $today-deals-ht / 2;
+        //background-color: #006aac;
+        border: 1px solid rgba(180, 180, 180, 0.3);
+
+        &:first-of-type {
+          border-bottom-color: transparent;
+        }
+
+        &:hover {
+          position: relative;
+          z-index: 10;
+          @include box-shadow($item-shadow);
+        }
+
+      }
+
+      .item a {
+        overflow: hidden;
+        display: block;
+        height: ($today-deals-ht / 2);
+        padding: 10px;
+        font-size: 0.8em;
+        font-weight: 300;
+
+        &:hover h2 {
+          font-weight: 900;
+        }
+
+        h2 {
+          font-size: 1.5em;
+          font-weight: 300;
+        }
+
+        img {
+          float: left;
+          height: 170px;
+          margin-right: 20px;
+        }
+
+        .discount {
+          display: inline-block;
+          @include background(linear-gradient(to bottom left, $discount-color, shade($discount-color, 50)));
+          color: #ffffff;
+
+          padding: 10px;
+          margin-top: 10px;
+          border-radius: 3px;
+        }
+
+      }
+    }
+
+    .category-items .right-items {
+      @extend .left-items;
+
+      li {
+        width: 50%;
+        height: $today-deals-ht;
+        float: left;
+        border-left-color: transparent;
+
+        &:first-of-type {
+          border-bottom-color: rgba(180, 180, 180, 0.3);
+        }
+      }
+
+      .item a {
+        height: $today-deals-ht;
+        text-align: center;
+        overflow: hidden;
+        display: block;
+
+        .img-box {
+          overflow: hidden;
+        }
+
+        img {
+          float: none;
+          height: 220px;
+          width: 278px;
+          margin: 0;
+        }
+      }
+    }
+
+    .active {
+      display: block;
+    }
+  }
+}
+
+
+// ------------------------------------
+// ------------------------------------
+//          Phones Section
+// ------------------------------------
+// ------------------------------------
+
+
+.phones {
+
+  margin-bottom: $section-space;
+  height: $phone-box-ht;
+
+  .phone-box {
+
+    width: 100%;
+    height: $phone-height;
+
+    .phone-items {
+      width: 60%;
+      float: left;
+      display: inline-block;
+
+      @extend %item;
+
+      .item {
+        width: 50%;
+        border-right-color: transparent;
+      }
+    }
+
+    .phone-slider {
+      @extend %slider-props;
+      @extend %slider-prop-inner;
+    }
+
+  }
+}
+
+
+// ------------------------------------
+// ------------------------------------
+//          Computers Section
+// ------------------------------------
+// ------------------------------------
+
+
+.computers {
+
+  height: $phone-box-ht;
+  margin-bottom: $section-space;
+
+  .computer-box {
+
+    width: 100%;
+    height: $phone-height;
+
+    .computer-items {
+      @extend .phone-items;
+      width: 60%;
+      display: inline-block;
+
+      @extend %item;
+
+      .item {
+        width: 33.33%;
+        border-left-color: transparent;
+
+        a .img-box img {
+          width: 178px;
+        }
+      }
+
+      li.computer-hot {
+        width: 66.66%;
+
+        a {
+          height: $phone-height / 2;
+          padding: 10px;
+        }
+
+        a .img-box {
+          height: 100%;
+
+          img {
+            width: 458px;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .computer-slider {
+      @extend %slider-props;
+      float: left;
+      @extend %slider-prop-inner;
+
+      .nav-dots {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        @include box-shadow(-1px 0 5px rgba(#7e7e7e, 0.8));
+      }
+    }
+  }
+}
+
+// ------------------------------------
+// ------------------------------------
+//          Info Section
+// ------------------------------------
+// ------------------------------------
+
+
+.imp-links {
+
+  margin-top: 30px;
+  overflow: hidden;
+  background-color: #ffffff;
+
+  .subscribe {
+    width: 40%;
+
+    input {
+      font-size: 0.8em;
+      padding: 6px;
+      width: 55%;
+      vertical-align: top;
+      line-height: 18px;
+    }
+
+    input#sub-button {
+      @include button(8px, 2px, #e33f1e, false, 1em);
+      font-weight: 200;
+      width: 20%;
+    }
+
+    .social ul {
+      li {
+        float: left;
+      }
+
+    }
+    .social {
+
+      @keyframes bounce {
+        from {
+          top: 0;
+        }
+        to {
+          top: -4px;
+        }
+      }
+
+      $icon-size: 40px 40px;
+
+      li {
+        padding-right: 10px;
+        cursor: pointer;
+        &:hover a {
+          //@include animation(bounce 0.15s);
+          @include translateY(-5px);
+        }
+      }
+
+      li a {
+        display: block;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        text-indent: -999em;
+      }
+
+      li:nth-child(1) a {
+        background: url("../img/facebook.png") no-repeat;
+        background-size: $icon-size;
+      }
+      li:nth-child(2) a {
+        background: url("../img/twitter.png") no-repeat;
+        background-size: $icon-size;
+      }
+      li:nth-child(3) a {
+        background: url("../img/linkedin.png") no-repeat;
+        background-size: $icon-size;
+      }
+      li:nth-child(4) a {
+        background: url("../img/pinterest.png") no-repeat;
+        background-size: $icon-size;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 1.25em;
+    padding: 10px 0;
+  }
+
+  p {
+    font-size: 0.8em;
+  }
+
+  .links {
+    width: 60%;
+
+    .link-section {
+      float: left;
+      width: 33.33%;
+    }
+
+    a {
+      font-size: 0.8em;
+    }
+  }
+}
+
+.partners {
+
+  $icon-size: 70px 35px;
+
+  background-color: #fff;
+  text-align: center;
+
+  ul {
+    display: inline-block;
+  }
+
+  li {
+    display: inline-block;
+    padding: 10px 40px;
+  }
+
+  li a {
+    display: block;
+    width: 70px;
+    height: 35px;
+    text-indent: -999em;
+  }
+
+  li:nth-child(1) a {
+    background: url("../img/logos/paypal.jpg") no-repeat center;
+    background-size: $icon-size;
+  }
+  li:nth-child(2) a {
+    background: url("../img/logos/visa.jpg") no-repeat center;
+    background-size: $icon-size;
+  }
+  li:nth-child(3) a {
+    background: url("../img/logos/mastercard.jpg") no-repeat center;
+    background-size: $icon-size;
+  }
+  li:nth-child(4) a {
+    background: url("../img/logos/american.jpg") no-repeat center;
+    background-size: $icon-size;
+  }
+  li:nth-child(5) a {
+    background: url("../img/logos/skrill.jpg") no-repeat center;
+    background-size: $icon-size;
+  }
+  li:nth-child(6) a {
+    background: url("../img/logos/swift.jpg") no-repeat center;
+    background-size: $icon-size;
+  }
+}

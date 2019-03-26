@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="css/ie.css">
+    <link rel="stylesheet" href="css/print.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="index">
+
+        <header id="header">
+            <section class="control-bar">
+                <div class="container">
+                    <ul class="left-menu left">
+                        <li>
+                            Hello.
+                            <a href="#">Sign In</a> or
+                            <a href="#">Sign Up</a>
+                        </li>
+                    </ul>
+
+                    <ul class="right-menu right">
+                        <li>
+                            <a href="#">
+                                <span id="cart"></span>
+                                <span id="badge">0</span>
+                            </a>
+                        </li>
+                        <li><a href="#">Account Panel</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="clearfix"></div>
+
+            <section class="search">
+                <div class="container">
+                    <div class="search-inner">
+                        <form action="search.html">
+                            <ul>
+                                <li class="brand">
+                                    <div>
+                                        <a href="index.html"><img src="img/shopper.png" alt="Shopper Logo" /></a>
+                                    </div>
+                                </li>
+                                <li class="search-box">
+                                    <div>
+                                        <input type="text" placeholder="Search..." />
+                                    </div>
+                                </li>
+                                <li class="option-box">
+                                    <div>
+                                        <select name="category" id="category">
+                                      <option value="1" selected>All Categories</option>
+                                      <option value="2">Women</option>
+                                      <option value="3">Men</option>
+                                  </select>
+                                    </div>
+                                </li>
+                                <li class="submit-box">
+                                    <div>
+                                        <input type="submit" value="Search" class="btn" />
+                                    </div>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <main>
+
+            <div class="main-navigation">
+                <div class="container">
+                    <section class="categories">
+                        <ul class="category-list">
+                            <li>
+                                <a href="#">Men</a>
+                                <?php //include_once("drop-menu.php"); ?>
+                            </li>
+                            <li>
+                                <a href="#">Women</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Information</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#">Email</a>
+                            </li>
+
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div class="container">
+                <section class="featured">
+                    <div class="slider">
+                        <a href="#" class="slide-change prev" id="prev"><span></span></a>
+                        <a href="#" class="slide-change next" id="next"><span></span></a>
+                        <ul class="slides">
+                            <li class="slide">
+                                <a href="#slide1"><img src="img/slide1.jpg" alt="Slide 1" /></a>
+                            </li>
+                            <li class="slide">
+                                <a href="#slide2"><img src="img/slide1_1.jpg" alt="Slide 2" /></a>
+                            </li>
+                            <li class="slide">
+                                <a href="#slide3"><img src="img/slide3.jpg" alt="Slide 3" /></a>
+                            </li>
+                            <li class="slide">
+                                <a href="#slide4"><img src="img/slide3_1.jpg" alt="Slide 4" /></a>
+                            </li>
+                            <li class="slide">
+                                <a href="#slide5"><img src="img/slide4_1.jpg" alt="Slide 5" /></a>
+                            </li>
+                            <li class="slide">
+                                <a href="#slide6"><img src="img/slide6.jpg" alt="Slide 6" /></a>
+                            </li>
+                            <li class="slide">
+                                <a href="#slide1"><img src="img/slide1.jpg" alt="Slide 1" /></a>
+                            </li>
+                        </ul>
+                        <ul class="slider-nav">
+                            <li class="current"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="featured-items">
+                    <div class="items">
+                        <ul>
+                            <li class="item">
+                                <a href="#">
+                                    <img src="img/dr_martend.jpg" alt="Dr martend" />
+                                    <span class="img-label">
+                                  <p>
+                                      Dr.Martend Shoes<br>
+                                      <i>$699.0</i>
+                                  </p>
+                              </span>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <img src="img/Footwear High Heels.jpg" alt="footwear high heels" />
+                                    <span class="img-label">
+                                  <p>
+                                      Footwear High Heels<br>
+                                      <i>$1299.0</i>
+                                  </p>
+                              </span>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <img src="img/black-classic-clothes-292999.jpg" alt="black classic clothes" class="big" />
+                                    <span class="img-label">
+                                  <p>
+                                      Black Classic Clothes<br>
+                                      <i>$2799.0</i>
+                                  </p>
+                              </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="container">
+                <section class="today-deals product-section">
+                    <header>
+                        <h1>Today's Deals</h1>
+                        <div class="tabs">
+                            <ul id="today-tabs">
+                                <li class="tab active" id="men-tab"><a href="#">Men</a></li>
+                                <li class="tab" id="women-tab"><a href="#">Women</a></li>
+                            </ul>
+                        </div>
+                    </header>
+
+                    <div class="clearfix"></div>
+
+                    <div class="today-items">
+                        <div class="category-items men-items active">
+                            <ul class="left-items">
+                                <li class="item">
+                                    <a href="#">
+                                        <img src="img/footwear-shoes-sneakers-1670766.jpg" alt="footwear-shoes-sneakers" />
+                                        <h2>Footwear shoes sneakers</h2>
+                                        <span class="price-old">$779.0</span><i class="price">$559</i><br>
+                                        <i class="discount">-30%</i>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">
+                                        <img src="img/field-footwear-grass-186035.jpg" alt="Field footwear grass" />
+                                        <h2>Field footwear grass</h2>
+                                        <span class="price-old">$599.0</span><i class="price">$559</i><br>
+                                        <i class="discount">-40%</i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="right-items">
+                                <li class="item">
+                                    <a href="#">
+                                        <div class="img-box">
+                                            <img src="img/brand-design-fashion-1032110.jpg" alt="Brand design fashion" />
+                                        </div>
+                                        <h2>Brand Design Fashion</h2>
+                                        <span class="price-old">$559.0</span><i class="price">$559</i><br>
+                                        <i class="discount">-25%</i>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">
+                                        <div class="img-box">
+                                            <img src="img/footwear-shoes-sneakers-66259.jpg" alt="footwear shoes sneakers 66259" />
+                                        </div>
+                                        <h2>Footwear shoes sneakers 66259</h2>
+                                        <span class="price-old">$749.0</span><i class="price">$559</i><br>
+                                        <i class="discount">-15%</i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="category-items women-items">
+                            <ul class="left-items">
+                                <li class="item">
+                                    <a href="#">
+                                        <img src="img/beige-elegant-fashion-134064.jpg" alt="beige elegant" />
+                                        <h2>Beige Elegant Fashion</h2>
+                                        <span class="price-old">$1579.0</span><i class="price">$559</i><br>
+                                        <i class="discount">-20%</i>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">
+                                        <img src="img/car-carefree-chucks-51397.jpg" alt="chucks" />
+                                        <h2>Car Carefree Chucks</h2>
+                                        <span class="price-old">$2599.0</span><i class="price">$559</i><br>
+                                        <i class="discount">-10%</i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="right-items">
+                                <li class="item">
+                                    <a href="#">
+                                        <img src="img/accessory-footwear-notepad-533442.jpg" alt="Accessory footwear" />
+                                        <h2>Accessory Footwear Notepad</h2>
+                                        <span class="price-old">$1799.0</span><i class="price">$559</i><br>
+                                        <i class="discount">-25%</i>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">
+                                        <img src="img/fashion-feet-girl-5188.jpg" alt="fashion feet girl" />
+                                        <h2>Fashion Feet Girl</h2>
+                                        <span class="price-old">$2349.0</span><i class="price">$559</i><br>
+                                        <i class="discount">-15%</i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mens product-section">
+                    <header>
+                        <h1>Shoes Men</h1>
+                    </header>
+
+                    <div class="men-box">
+                        <div class="men-items">
+                            <ul>
+                                <li class="item">
+                                    <a href="#">
+                                        <h2>Close-up Colors Dark</h2>
+                                        <i class="category">Shoes Men</i>
+                                        <div class="img-box">
+                                            <img src="img/close-up-colors-dark-1307128.jpg" alt="close up dark" />
+                                        </div>
+                                    </a>
+                                    <span><a href="# " class="price ">$749.0</a></span>
+                                </li>
+                                <li class="item ">
+                                    <a href="# ">
+                                        <h2>Black and White Footwear</h2>
+                                        <i class="category ">Shoes Men</i>
+                                        <div class="img-box ">
+                                            <img src="img/black-and-white-black-and-white-footwear-1302320.jpg" alt="black and white footwear " />
+                                        </div>
+                                    </a>
+                                    <span><a href="# " class="price ">$749.0</a></span>
+                                </li>
+                                <li class="item ">
+                                    <a href="# ">
+                                        <h2>Activity Fun Hipster</h2>
+                                        <i class="category ">Skates</i>
+                                        <div class="img-box ">
+                                            <img src="img/activity-fun-hipster-1994.jpg " alt="fun hipster" />
+                                        </div>
+                                    </a>
+                                    <span><a href="# " class="price ">$749.0</a></span>
+                                </li>
+                                <li class="item ">
+                                    <a href="# ">
+                                        <h2>Brow Business</h2>
+                                        <i class="category ">Business</i>
+                                        <div class="img-box ">
+                                            <img src="img/brown-business-casual-293405.jpg " alt="brown business" />
+                                        </div>
+                                    </a>
+                                    <span><a href="# " class="price ">$749.0</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="men-slider section-slider ">
+                            <a href="# " class="slide-change " id="prev "><span class="arrow "></span></a>
+                            <a href="# " class="slide-change " id="next "><span class="arrow "></span></a>
+                            <ul class="slides ">
+                                <li class="slide ">
+                                    <a href="#slide1 "><img src="img/chill-chilling-feet-91223.jpg " alt="chill-chilling-feet" /></a>
+                                </li>
+                                <li class="slide ">
+                                    <a href="#slide2 "><img src="img/adidas-fashion-feet-1102776.jpg " alt="adidas fashion" /></a>
+                                </li>
+                                <li class="slide ">
+                                    <a href="#slide3 "><img src="img/adult-beach-crossed-808469.jpg " alt="adult beach" /></a>
+                                </li>
+                                <li class="slide ">
+                                    <a href="#slide1 "><img src="img/chill-chilling-feet-91223.jpg " alt="chill-chilling-feet" /></a>
+                                </li>
+                            </ul>
+                            <ul class="nav-dots ">
+                                <li class="current "></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="clearfix "></div>
+
+                <section class="womens product-section ">
+                    <header>
+                        <h1>Shoes Women</h1>
+                    </header>
+
+                    <div class="women-box ">
+                        <div class="women-slider section-slider ">
+                            <a href="# " class="slide-change " id="prev "><span class="arrow "></span></a>
+                            <a href="# " class="slide-change " id="next "><span class="arrow "></span></a>
+                            <ul class="slides ">
+                                <li class="slide ">
+                                    <a href="#slide1 "><img src="img/converse-fashion-footwear-52574.jpg " alt="Slide 1 " /></a>
+                                </li>
+                                <li class="slide ">
+                                    <a href="#slide2 "><img src="img/blue-jeans-blur-clothes-349494.jpg " alt="Slide 1 " /></a>
+                                </li>
+                                <li class="slide ">
+                                    <a href="#slide3 "><img src="img/motion-nike-outdoor-253490.jpg " alt="Slide 1 " /></a>
+                                </li>
+                                <li class="slide ">
+                                    <a href="#slide1 "><img src="img/converse-fashion-footwear-52574.jpg" alt="converse-fashion-footwear " /></a>
+                                </li>
+                            </ul>
+                            <ul class="nav-dots ">
+                                <li class="current "></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div class="women-items ">
+                            <ul>
+                                <li class="women-hot item ">
+                                    <a href="# ">
+                                        <div class="img-box ">
+                                            <img src="img/pc-item-hot.jpg " alt="Samsung Galaxy Note 5 " />
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item ">
+                                    <a href="# ">
+                                        <h2>Footwear Shoe</h2>
+                                        <i class="category ">Shoes Women</i>
+                                        <div class="img-box">
+                                            <img src="img/foot-footwear-shoe-2040090.jpg" alt="footwear shoes" />
+                                        </div>
+                                    </a>
+                                    <span><a href="# " class="price ">$749.0</a></span>
+                                </li>
+                                <li class="item ">
+                                    <a href="# ">
+                                        <h2>Footwear Macro Shoelace</h2>
+                                        <i class="category ">Shoes Women</i>
+                                        <div class="img-box">
+                                            <img src="img/footwear-macro-shoelace-1750045.jpg" alt="macro shoelace" />
+                                        </div>
+                                    </a>
+                                    <span><a href="# " class="price ">$749.0</a></span>
+                                </li>
+                                <li class="item ">
+                                    <a href="# ">
+                                        <h2>Chucks Classic</h2>
+                                        <i class="category ">Classic</i>
+                                        <div class="img-box">
+                                            <img src="img/casual-chucks-classic-531892.jpg" alt="chucks classic" />
+                                        </div>
+                                    </a>
+                                    <span><a href="# " class="price ">$749.0</a></span>
+                                </li>
+                                <li class="item ">
+                                    <a href="# ">
+                                        <h2>Casual Color Colorful</h2>
+                                        <i class="category ">Classic</i>
+                                        <div class="img-box ">
+                                            <img src="img/black-and-white-classic-elegant-273930.jpg" alt="black and white classic" />
+                                        </div>
+                                    </a>
+                                    <span><a href="# " class="price ">$749.0</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </main>
+
+        <div class="clearfix "></div>
+
+        <section class="imp-links ">
+            <div class="container ">
+                <div class="subscribe left ">
+                    <h1>Subscribe</h1>
+                    <form action=" ">
+                        <input type="text " name="sub-mail " placeholder="Please enter your email ">
+                        <input id="sub-button " type="submit " value="Subscribe ">
+                    </form>
+                    <p>Register now to get updates on promotions and coupons.</p>
+                    <div class="social ">
+                        <h2>Stay Connected</h2>
+                        <ul>
+                            <li><a href="# " title="Facebook ">Facebook</a></li>
+                            <li><a href="# " title="Twitter ">Twitter</a></li>
+                            <li><a href="# " title="LinkedIn ">Linked In</a></li>
+                            <li><a href="# " title="Pinterest ">Pinterest</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="links left ">
+                    <div class="link-section ">
+                        <h1>How to Buy</h1>
+                        <ul>
+                            <li><a href="# ">Create an Account</a></li>
+                            <li><a href="# ">Making Payments</a></li>
+                            <li><a href="# ">Delivery Options</a></li>
+                            <li><a href="# ">Buyer Protection</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-section ">
+                        <h1>Customer Service</h1>
+                        <ul>
+                            <li><a href="# ">Customer Support</a></li>
+                            <li><a href="# ">Frequently Asked Questions</a></li>
+                            <li><a href="# ">Transaction Service Agreement</a></li>
+                            <li><a href="# ">Take Our Survey</a></li>
+                            <li><a href="# ">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-section ">
+                        <h1>Partnership Program</h1>
+                        <ul>
+                            <li><a href="# ">Partnerships</a></li>
+                            <li><a href="# ">Affiliate Program</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partners ">
+            <div class="container ">
+                <ul>
+                    <li><a href="# " title="Paypal ">Paypal</a></li>
+                    <li><a href="# " title="Visa ">Visa</a></li>
+                    <li><a href="# " title="Mastercard ">Mastercard</a></li>
+                    <li><a href="# " title="American Express ">American Express</a></li>
+                    <li><a href="# " title="Skrill ">Skrill</a></li>
+                    <li><a href="# " title="Bank Transfer ">Bank Transfer</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="info-links ">
+            <div class="container ">
+                <div class="info left ">
+                    <h1>Information Links</h1>
+                    <a href=" ">About Shopping,</a> <a href=" ">Site Map,</a> <a href=" ">Online Shopping,</a> <a href=" ">Buy,</a>
+                    <a href=" ">My Orders,</a> <a href=" ">Help Center,</a> <a href=" ">Customer Support,</a>
+                    <a href=" ">Shopping Seller Center,</a> <a href=" ">Mobile Site.</a>
+                </div>
+                <div class="apps left ">
+                    <h1>Mobile Apps</h1>
+                    <ul>
+                        <li class="app "><a href="# ">Google Play</a></li>
+                        <li class="app "><a href="# ">App Store</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container ">
+                <div class="copy ">
+                    <a href="# ">brand.com</a>
+                    <p> &copy; 2019 eShopper.com. All rights reserved</p>
+                </div>
+            </div>
+
+            <div class="back-to-top ">
+                <span title="Back to Top ">
+                    To Top
+                </span>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="js/jquery.js " type="text/javascript "></script>
+    <script src="js/MainSlider.js " type="text/javascript "></script>
+    <script src="js/SectionSlider.js " type="text/javascript "></script>
+    <script src="js/tabs.js " type="text/javascript "></script>
+    <script src="js/items.js " type="text/javascript "></script>
+    <script src="js/ProductGallery.js " type="text/javascript "></script>
+</body>
+
+</html>

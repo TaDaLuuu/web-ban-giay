@@ -1,0 +1,536 @@
+.item-page {
+
+  .gallery {
+    width: 35%;
+    float: left;
+    padding-right: 20px;
+
+    .img-view {
+      height: $img-view-ht;
+      padding: 2px;
+      overflow: hidden;
+      border: $border $border-color;
+
+      .img {
+        height: $img-view-ht - 6;
+        display: none;
+        overflow: hidden;
+      }
+
+      .img:nth-child(1) {
+        display: block;
+      }
+
+      img {
+        width: 400px;
+      }
+    }
+
+    .img-list {
+
+
+      ul {
+        padding: 8px 0;
+        overflow: hidden;
+      }
+
+      li {
+        position: relative;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        padding-top: 4px;
+        cursor: pointer;
+        width: 70px;
+        height: 75px;
+      }
+
+      li span {
+        width: 70px;
+        height: 70px;
+        display: block;
+        overflow: hidden;
+        border: 1px solid $border-color;
+      }
+
+      li.current {
+
+        background: url("../img/thumb_arrow.png") no-repeat 31px 0;
+
+        span {
+          border-width: 2px;
+          border-color: #e75c18;
+        }
+      }
+
+      img {
+        position: absolute;
+        top: 5px;
+        left: 1px;
+        width: 68px;
+        height: 68px;
+        border: 2px solid transparent;
+      }
+    }
+
+    .img-list .thumbs {
+      .thumb {
+        float: left;
+      }
+    }
+
+  }
+
+  .meta-info {
+    width: 65%;
+    display: inline-block;
+
+    > div {
+      padding: 15px 15px;
+    }
+
+    > div:first-child {
+      padding-top: 0;
+      padding-bottom: 10px;
+    }
+
+    .info {
+      border-bottom: $border $border-color;
+      h1 {
+        font-size: 1.5em;
+        padding-bottom: 10px;
+      }
+
+      .feedback-num {
+        font-size: 0.85em;
+        i {
+          font-size: 1.1em;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .price {
+
+      margin: 5px 0;
+
+      dd {
+        font-size: 1.6em;
+        font-weight: 700;
+        color: #ff670e;
+      }
+    }
+
+    dl {
+      padding: 5px 0;
+      width: 100%;
+    }
+
+    dl dt {
+      display: inline-block;
+      width: 15%;
+      color: gray;
+      font-size: 0.85em;
+      font-weight: 300;
+      vertical-align: middle;
+    }
+
+    dl dd {
+      display: inline-block;
+      width: 80%;
+      margin: 0;
+      font-size: 0.9em;
+      vertical-align: middle;
+      color: #2a2a2a;
+    }
+
+    .total {
+      background-color: $bg-color;
+      //margin: 10px 0;
+      padding: 20px auto;
+    }
+
+    .total .quantity {
+      input {
+        padding: 5px 3px;
+        width: 70px;
+        @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.15));
+        border: $border #ccc;
+      }
+    }
+
+    .total .heavy {
+      font-weight: 600;
+    }
+
+    .total .total-price {
+      font-size: 1.0em;
+    }
+
+    .total .buy {
+      padding-left: 15.5%;
+      a {
+        @include button(9px, 3px, #ff7b26, false, 1em);
+        width: 150px;
+        margin-right: 5px;
+        margin-top: 5px;
+      }
+      a:last-child {
+        @include button(9px, 3px, #ff3a26, false, 1em);
+      }
+    }
+  }
+
+  .details {
+
+    width: 100%;
+    margin-top: 30px;
+
+    .header {
+
+      overflow: hidden;
+      margin-bottom: 20px;
+
+      ul {
+        width: 100%;
+        float: left;
+        border-bottom: 2px solid #0092ff;
+      }
+
+      li {
+        position: relative;
+        //bottom: -1px;
+        float: left;
+        background-color: #fff;
+        border: $border $border-color;
+        border-bottom: none;
+        border-right-color: transparent;
+
+        &:last-child {
+          border-right-color: $border-color;
+        }
+
+        &.active {
+          a {
+            color: #fff;
+          }
+          background-color: #0092ff;
+          border-color: #0092ff;
+          z-index: 3;
+        }
+
+        a {
+          display: block;
+          padding: 6px 12px;
+          font-weight: 500;
+        }
+        a:hover {
+          text-decoration: none;
+        }
+      }
+
+    }
+
+    .tab .detail-data {
+      display: none;
+    }
+
+    .tab .active {
+      display: block;
+    }
+
+    .tab .overview {
+      width: 100%;
+
+      h3 {
+        font-size: 1.4em;
+        color: #5d5d5d;
+        padding: 8px 0;
+      }
+
+      p {
+        padding: 15px 0;
+        font-size: 0.9em;
+        color: #5d5d5d;
+      }
+
+      img {
+        max-width: 45%;
+        padding: 10px 20px 10px 0;
+      }
+
+    }
+
+    .tab .specs table {
+
+      width: 100%;
+      font-size: 0.9em;
+      border-top: 3px solid #ddd;
+
+      tr th {
+        background-color: #eee;
+        font-weight: 600;
+      }
+
+      tr th, tr td {
+        width: 50%;
+        padding: 6px 15px;
+        border: 1px solid #ddd;
+      }
+
+      tr th:first-child, tr td:first-child {
+        width: 30%;
+      }
+
+    }
+
+    .tab .review {
+
+      .write-rating {
+        width: 35%;
+        float: right;
+        padding: 14px 0 14px 20px;
+      }
+
+      .write-rating .rating-container {
+        position: relative;
+        padding: 20px 10px ;
+        background-color: #ffffff;
+        border: $border $border-color;
+        @include box-shadow($item-shadow);
+        text-align: center;
+      }
+      .write-rating .rating {
+      }
+      .write-rating .write {
+        padding-top: 10px;
+        button {
+          @include button(10px, 3px, #0092ff, false, 1em);
+        }
+      }
+
+    }
+
+    .tab .review .reviews {
+      width: 65%;
+      ul {
+
+      }
+      li {
+        border-bottom: $border tint($border-color, 50);
+        padding: 14px 0;
+      }
+
+      p.user {
+        font-weight: 400;
+        color: darkblue;
+      }
+
+      p.user span {
+        color: #000;
+        font-size: 0.82em;
+        font-weight: 300;
+      }
+      p.date {
+        color: #979797;
+      }
+
+      .star-rating {
+        padding: 5px 0 8px;
+      }
+
+      p.comment {
+        font-size: 0.85em;
+        padding: 5px 7px;
+        background-color: #f0f0f0;
+      }
+    }
+  }
+
+}
+
+#product {
+  position: relative;
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+#product #write-rating-form {
+
+  display: none;
+  position: fixed;
+  top: 100px;
+  left: 30%;
+  z-index: 9999;
+  background-color: #ffffff;
+  padding: 10px 25px;
+  width: 600px;
+
+  border-top: 2px solid #0092ff;
+
+  @include box-shadow(0 8px 25px 3px #494949);
+
+  span.close {
+    background: url("../img/close.png") no-repeat center;
+    background-size: 15px 15px;
+
+    color: #000;
+    display: block;
+    height: 25px;
+    width: 25px;
+    text-indent: -9999px;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+
+  .write-box {
+    h1 {
+      padding-bottom: 10px;
+      font-size: 1.4em;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      padding: 5px 0;
+    }
+
+    > h2 {
+      padding: 5px 8px;
+      background-color: #eee;
+      height: 70px;
+    }
+    h2 img {
+      height: 100%;
+      float: left;
+    }
+    h2 span {
+      width: 550 - 30 - 60px;
+      padding-left: 15px;
+      line-height: 130%;
+      display: inline-block;
+      vertical-align: top;
+      float: left;
+    }
+
+    label {
+      font-size: 0.80em;
+      color: #5d5d5d;
+      font-weight: 300;
+      display: block;
+    }
+    input {
+      background-color: #f5f5f5;
+      line-height: 22px;
+      outline: none;
+      padding: 0 3px;
+      border: 1px solid #d5d5d5;
+
+      &:focus {
+        border-color: #afafaf;
+      }
+    }
+  }
+
+  .write-box .user {
+    overflow: hidden;
+    padding: 20px 0;
+    > div {
+      float: left;
+    }
+    .nick {
+      width: 50%;
+      padding-right: 15px;
+    }
+    .country {
+      width: 50%;
+    }
+    input {
+      width: 100%;
+    }
+  }
+
+  .write-box {
+
+    .user-rating, .user-review {
+      float: left;
+      width: 50%;
+    }
+
+    .user-rating {
+      padding-right: 15px;
+
+      .recommend {
+        width: 100%;
+        font-size: 0.8em;
+        font-style: italic;
+        margin: 15px 0;
+        padding: 5px 8px;
+        background-color: #efefef;
+      }
+
+      label {
+        display: inline-block;
+        padding: 0 8px 0 5px;
+      }
+
+      .user-stars ul {
+        overflow: hidden;
+        display: inline-block;
+      }
+
+      .user-stars ul li.star {
+        float: left;
+        display: list-item;
+        width: 21px;
+        height: 20px;
+        cursor: pointer;
+
+        background: url("../img/star-empty.png") no-repeat center;
+        background-size: 18px 18px;
+
+        &.filled {
+          background: url("../img/star-filled.png") no-repeat center;
+          background-size: 20px 20px;
+        }
+      }
+    }
+
+    .user-review {
+      textarea {
+        background-color: #f5f5f5;
+        width: 100%;
+        padding: 0 3px;
+        height: 160px;
+        outline: none;
+        border: 1px solid #d5d5d5;
+
+        &:focus {
+          border-color: #afafaf;
+        }
+      }
+    }
+
+    .submit-review {
+      display: inline-block;
+      float: right;
+      padding: 10px 0;
+
+      input {
+        @include button(10px, 3px, #ff4d00, false, 1em);
+        padding: 10px 20px;
+        font-weight: 300;
+      }
+    }
+
+  }
+
+}

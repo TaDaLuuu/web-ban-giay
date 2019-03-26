@@ -1,0 +1,48 @@
+@import "compass";
+@import "compass/css3";
+@import "partials/normalize";
+@import "partials/mixins";
+@import "partials/variables";
+@import "partials/base";
+
+html, body {
+  font-family: "Helvetica-Nueue", Helvetica, Arial, sans-serif;
+  background-color: $body-color;
+}
+
+.index {
+  background-color: $bg-color;
+}
+
+main.sub-page {
+  border-top: 1px solid #e9e9e9;
+  padding-top: 25px;
+}
+
+* {
+  @include box-sizing(border-box);
+  margin: 0;
+  padding: 0;
+  font-size: 0.95em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, p, dl {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+@import "partials/section/header";
+@import "partials/section/store-front";
+@import "partials/section/search";
+@import "partials/section/product";
+@import "partials/section/footer";

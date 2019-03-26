@@ -1,0 +1,150 @@
+
+.back-to-top {
+  position: fixed;
+  top: 110%;
+  z-index: 999;
+  background-color: #000;
+  @include opacity(0.2);
+  border-radius: 100px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  span {
+    text-indent: -9999px;
+    display: block;
+    background: url("../img/to-top.png") no-repeat center;
+    background-size: 18px 18px;
+    height: 32px;
+  }
+  &:hover {
+    @include opacity(0.6);
+  }
+}
+
+.imp-links, .partners, .info-links {
+  border-top: 1px solid rgba(180, 180, 180, 0.3);
+  padding: 25px 0 25px;
+  h1 {
+    font-size: 1.1em;
+    padding-bottom: 10px;
+  }
+
+  a {
+    color: #999;
+  }
+
+  p {
+    color: #999;
+  }
+}
+
+.info-links {
+  overflow: hidden;
+  background-color: #e7e7e7;
+
+  .info {
+    width: 50%;
+
+    a {
+      font-size: 0.8em;
+    }
+  }
+  .apps {
+    width: 50%;
+
+    ul {
+
+      li {
+        float: left;
+        position: relative;
+        width: 50%;
+        padding-right: 20px;
+
+        a {
+          display: block;
+          color: #ffffff;
+          font-size: 1.1em;
+          width: 100%;
+          line-height: 30px;
+          padding: 10px 5px 10px 65px;
+          letter-spacing: 5px;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          &:before {
+            position: absolute;
+            left: 15px;
+            overflow: hidden;
+            content: " ";
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+          }
+
+        }
+      }
+
+    }
+
+    ul .app:nth-child(1) a {
+      background-color: #9bc632;
+
+      &:hover {
+        background-color: shade(#9bc632, 30);
+      }
+
+      &:before {
+        background: url("../img/logos/android.png") no-repeat center;
+        background-size: 30px 30px;
+      }
+
+    }
+
+    ul .app:nth-child(2) a {
+      background-color: gray;
+
+      &:hover {
+        background-color: shade(gray, 30);
+      }
+
+      &:before {
+        background: url("../img/logos/apple.png") no-repeat center;
+        background-size: 30px 30px;
+      }
+
+    }
+
+  }
+}
+
+footer {
+  background-color: #2a2a2a;
+
+  .copy {
+    padding: 8px 0;
+    font-size: 0.8em;
+    font-weight: 300;
+
+    p {
+      display: inline-block;
+      color: #747474;
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .foot-btn a {
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    bottom: 5px;
+    right: 0;
+    width: 70px;
+    line-height: 40px;
+    background-color: #ffffff;
+  }
+}
